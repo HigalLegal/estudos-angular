@@ -1,0 +1,13 @@
+<app-comp-atributos>
+  <h1>Mensagem do Ednaldo Pereira</h1>
+  <h3>Mensagem do Ednaldo Pereira, só que em tamanho reduzido</h3>
+</app-comp-atributos>
+<br>
+<br>
+<app-card *ngIf="isAliveComponent; else alternativeBlocK;"></app-card>
+<ng-template #alternativeBlocK>
+  <p>Ednaldo Pereira - Guerras Secretas</p>
+</ng-template>
+<button (click)="aparecer()">APARECE</button>
+<button (click)="desaparecer()">DESAPARECE</button>
+<router-outlet></router-outlet>

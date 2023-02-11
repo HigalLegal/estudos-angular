@@ -1,0 +1,19 @@
+<h1 [ngStyle]="{'background': corFundo}" (mouseover)="trocarCor()">CURSO ANGULAR</h1>
+<p [ngClass]="estilo">comp-atributos works!</p>
+<button (click)="mudarCor()" >Mudar cor</button> <br>
+<input type="text" [(ngModel)]="item"> <button (click)="adicionarItem()">adicionar</button>
+<p> {{ item }} </p>
+<ul>
+  <li *ngFor="let l of lista">{{ l }}</li>
+</ul>
+
+<ng-content select="h1"></ng-content>
+
+<hr>
+<ng-template [ngIf]="isEnable">
+  <h3>Ednaldo Pereira oculto</h3>
+</ng-template>
+<hr>
+<button (click)="habilitar()">HABILITAR</button>
+<br>
+<ng-content select="h3"></ng-content>
